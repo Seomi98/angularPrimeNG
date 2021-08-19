@@ -81,23 +81,6 @@ describe('CrudPrimengComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should call deleteProduct', () => {
-  //   component.deleteProduct({category: "Accessories", description: "Product Description", id: "1000", name: "Bamboo Watch", price: 65});
-  //   expect(confirmationService.confirm).toHaveBeenCalled();
-  // });
-
-  // it('should call deleteProduct when successful', () => {
-  //   productService.deleteItem.and.returnValue(of([]));
-  //   component.deleteProduct({category: "Accessories", description: "Product Description", id: "1000", name: "Bamboo Watch", price: 65});
-  //   expect(messageService.add).toHaveBeenCalled();
-  // });
-
-  // it('should call deleteProduct when failure', () => {
-  //   productService.deleteItem.and.returnValue(throwError('error'));
-  //   component.deleteProduct({category: "Accessories", description: "Product Description", id: "1000", name: "Bamboo Watch", price: 65});
-  //   expect(messageService.add).toHaveBeenCalled();
-  // });
-
   it('should call openNew()', () => {
     component.openNew();
     expect(component.submitted).toBe(false);
@@ -109,64 +92,6 @@ describe('CrudPrimengComponent', () => {
     expect(component.product).toEqual({category: "Accessories", description: "Product Description", id: "1000", name: "Bamboo Watch", price: 65});
     expect(component.productDialog).toBe(true);
   });
-
-  // it('should call saveProduct() with case update when successful', () => {
-  //   const response = [{
-  //     "id": "1000",
-  //     "name": "Bamboo Watch",
-  //     "description": "Product Description",
-  //     "price": 65,
-  //     "category": "Accessories",
-  // },
-  // {
-  //     "id": "1003",
-  //     "code": "nvklal433",
-  //     "name": "Black Watch3",
-  //     "description": "Product Description3",
-  //     "price": 73,
-  //     "category": "Accessories" ,
-  // }]
-  //   component.submitted = true;
-  //   component.product = {category: "Accessories", description: "Product Description", id: "1000", name: "Bamboo Watch", price: 65};
-  //   productService.updateItem.and.returnValue(response);
-  //   expect(messageService.add).toHaveBeenCalled();
-  // });
-
-  // it('should call saveProduct() with case update when failure', () => {
-  //   component.submitted = true;
-  //   component.product = {category: "Accessories", description: "Product Description", id: "1000", name: "Bamboo Watch", price: 65};
-  //   productService.updateItem.and.returnValue(throwError('error'));
-  //   expect(messageService.add).toHaveBeenCalled();
-  // });
-
-  // it('should call saveProduct() with case create when successful', () => {
-  //   const response = [{
-  //     "id": "1000",
-  //     "name": "Bamboo Watch",
-  //     "description": "Product Description",
-  //     "price": 65,
-  //     "category": "Accessories",
-  //   },
-  //   {
-  //     "id": "1001",
-  //     "code": "nvklal433",
-  //     "name": "Black Watch",
-  //     "description": "Product Description",
-  //     "price": 72,
-  //     "category": "Accessories",
-  //   }]
-  //   component.submitted = true;
-  //   component.product = {category: "Accessories", description: "Product Description", name: "Bamboo Watch", price: 65};
-  //   productService.createItem.and.returnValue(response);
-  //   expect(messageService.add).toHaveBeenCalled();
-  // });
-
-  // it('should call saveProduct() with case create when failure', () => {
-  //   component.submitted = true;
-  //   component.product = {category: "Accessories", description: "Product Description", name: "Bamboo Watch", price: 65};
-  //   productService.updateItem.and.returnValue(throwError('error'));
-  //   expect(messageService.add).toHaveBeenCalled();
-  // });
 
   it('should call hideDialog()', () => {
     component.hideDialog();

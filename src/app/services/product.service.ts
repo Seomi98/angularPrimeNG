@@ -1,7 +1,6 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { stringify } from '@angular/compiler/src/util';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Product } from '../models/product.model';
 
@@ -10,17 +9,6 @@ import { Product } from '../models/product.model';
 })
 export class ProductService {
     constructor(private http: HttpClient) {
-        // const headers  = new HttpHeaders();
-        // headers.set('Content-Type', 'application/json; charset=utf-8'); 
-    }
-
-    getProducts() {
-        const data = localStorage.getItem('products') ? localStorage.getItem('products') : null;
-        return data != null ? JSON.parse(data) : [];
-    }
-
-    setProducts(arr: Product[]) {
-        localStorage.setItem('products', JSON.stringify(arr));
     }
 
     getItem(): Observable<Product[]> {
